@@ -1,0 +1,97 @@
+<settings>
+	<parameter name="th1">
+		<type>float</type>
+		<value>0.3</value>
+		<description>Threshold corresponding to the first similarity measure (cosine).</description>
+	</parameter>
+	<parameter name="th2">
+		<type>float</type>
+		<value>0.33</value>
+		<description>Threshold corresponding to the second similarity measure (dice).</description>
+	</parameter>
+	<parameter name="th3">
+		<type>float</type>
+		<value>0.34</value>
+		<description>Threshold corresponding to the third similarity measure (cosine).</description>
+	</parameter>
+	<parameter name="src_gap">
+		<type>int</type>
+		<value>4</value>
+		<description>Maximun gap between sentences in the source document taken as adjacents.</description>
+	</parameter>
+	<parameter name="src_gap_least">
+		<type>int</type>
+		<value>0</value>
+		<description>Minimum value that src_gap can take after several iterations.</description>
+	</parameter>
+	<parameter name="susp_gap">
+		<type>int</type>
+		<value>4</value>
+		<description>Maximun gap between sentences in the suspicious document taken as adjacents.</description>
+	</parameter>
+	<parameter name="susp_gap_least">
+		<type>int</type>
+		<value>0</value>
+		<description>Minimum value that susp_gap can take after several iterations.</description>
+	</parameter>
+	<parameter name="verbatim_minlen">
+		<type>int</type>
+		<value>256</value>
+		<description>Minimum length in characters of common substring (using words) between both documents to consider to be a verbatim obfuscation case.</description>
+	</parameter>
+	<parameter name="src_size">
+		<type>int</type>
+		<value>1</value>
+		<description>Minimum amount of sentences in a plagiarism case in the side of source document.</description>
+	</parameter>
+	<parameter name="susp_size">
+		<type>int</type>
+		<value>1</value>
+		<description>Minimum amount of sentences in a plagiarism case in the side of suspicious document.</description>
+	</parameter>
+	<parameter name="min_sentlen">
+		<type>int</type>
+		<value>3</value>
+		<description>Minimum amount of words allowed in a senteces. If less, the sentence is anexed to the next sentence.</description>
+	</parameter>
+	<parameter name="min_plaglen">
+		<type>int</type>
+		<value>150</value>
+		<description>Minimum amount of chacarters allowed in each side of a plagiarism case.</description>
+	</parameter>
+	<parameter name="rssent">
+		<type>int</type>
+		<value>0</value>
+		<description>0: Annex small sententces to the next, Other: Remove small sentences.</description>
+	</parameter>
+	<parameter name="tf_idf_p">
+		<type>int</type>
+		<value>1</value>
+		<description>Define if computing tf_idf or just tf. 0: Use tf   1: Compute tf-idf</description>
+	</parameter>
+	<parameter name="rem_sw">
+		<type>int</type>
+		<value>0</value>
+		<description>Define the treatment of stopwords. 0: Do not remove stopwords   1: Remove 50 more common stopwords   Other:Remove all stopwords</description>
+	</parameter>
+	<parameter name="verbatim">
+		<type>int</type>
+		<value>1</value>
+		<description>Define if using the verbatim detection method. 0: Do not use it   Other: Use it</description>
+	</parameter>
+	<parameter name="summary">
+		<type>int</type>
+		<value>1</value>
+		<description>Define if using the summary detection method. 0: Do not use it   Other: Use it</description>
+	</parameter>
+	<parameter name="src_gap_summary">
+		<type>int</type>
+		<value>24</value>
+		<description>src_gap for the summary detection method</description>
+	</parameter>
+	<parameter name="susp_gap_summary">
+		<type>int</type>
+		<value>24</value>
+		<description>susp_gap for the summary detection method</description>
+	</parameter>
+</settings>
